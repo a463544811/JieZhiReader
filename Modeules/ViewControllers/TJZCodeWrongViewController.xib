@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TJZCodeWrongViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_code" translatesAutoresizingMaskIntoConstraints="NO" id="9av-F1-AWV">
+                    <rect key="frame" x="125.5" y="165" width="124" height="124"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="124" id="WY1-h9-Xsl"/>
+                        <constraint firstAttribute="width" constant="124" id="Z9g-ao-uFY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您扫描的二维码有误" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-jQ-YqD">
+                    <rect key="frame" x="114" y="324" width="147" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未能获取到正确的书籍信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-9G-XTw">
+                    <rect key="frame" x="89.5" y="348.5" width="196" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ei-5D-d5Q">
+                    <rect key="frame" x="40" y="423" width="295" height="44"/>
+                    <color key="backgroundColor" red="0.396078431372549" green="0.78823529411764703" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="AE6-34-Rf9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="重新扫描">
+                        <color key="titleColor" red="0.92941176469999998" green="0.94901960780000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="toScanClick:" destination="-1" eventType="touchUpInside" id="Fm9-rN-eyy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iZg-9G-XTw" firstAttribute="top" secondItem="KUA-jQ-YqD" secondAttribute="bottom" constant="5" id="9x0-de-o95"/>
+                <constraint firstItem="KUA-jQ-YqD" firstAttribute="top" secondItem="9av-F1-AWV" secondAttribute="bottom" constant="35" id="CLB-0f-Sk2"/>
+                <constraint firstAttribute="trailing" secondItem="6Ei-5D-d5Q" secondAttribute="trailing" constant="40" id="E6s-L1-CSc"/>
+                <constraint firstItem="KUA-jQ-YqD" firstAttribute="centerX" secondItem="9av-F1-AWV" secondAttribute="centerX" id="HRD-TH-pIr"/>
+                <constraint firstItem="KUA-jQ-YqD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e4J-Wb-gCc"/>
+                <constraint firstItem="KUA-jQ-YqD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f9G-Jc-bmb"/>
+                <constraint firstItem="6Ei-5D-d5Q" firstAttribute="top" secondItem="iZg-9G-XTw" secondAttribute="bottom" constant="55" id="oR4-bv-oaf"/>
+                <constraint firstItem="6Ei-5D-d5Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="rem-NK-DdJ"/>
+                <constraint firstItem="iZg-9G-XTw" firstAttribute="centerX" secondItem="KUA-jQ-YqD" secondAttribute="centerX" id="zS4-AP-tfg"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book_code" width="124" height="124"/>
+    </resources>
+</document>
